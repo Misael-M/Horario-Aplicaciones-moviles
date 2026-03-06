@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: SfCalendar(
       view: CalendarView.workWeek, //Solo muestra de lunes a viernes
-      backgroundColor: const Color(0xFFF5F5F7), //Color de fondo
+      backgroundColor:const Color(0xFF303030), //Color de fondo
       firstDayOfWeek: 1, //1 representa el Lunes
       appointmentTextStyle: const TextStyle( //Configuracion de laa letras
       fontSize: 14,             
@@ -71,6 +71,11 @@ class _MyHomePageState extends State<MyHomePage> {
       timeSlotViewSettings: const TimeSlotViewSettings( //Solo muestra de 7 am a 9 pm
       startHour: 7,  
       endHour: 21,
+      timeTextStyle: TextStyle(color: Colors.white), //Cambia el color de las letras del eje Y
+      ),
+      viewHeaderStyle: const ViewHeaderStyle( //Cambia el color de las letras del eje X
+          dayTextStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          dateTextStyle: TextStyle(color: Colors.white),
       ),
       ),
     );
